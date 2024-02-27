@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 
 // For Restaurant API
-app.get('/dapi/restaurants', async (req, res) => {
+app.get('/api/restaurants', async (req, res) => {
     const { lat, lng, page_type } = req.query;
     console.log(req.query);
 
@@ -40,7 +40,7 @@ app.get('/dapi/restaurants', async (req, res) => {
 
 
 // For Menu API
-app.get('/dapi/menu', async (req, res) => {
+app.get('/api/menu', async (req, res) => {
     const { 'page-type': page_type, 'complete-menu': complete_menu, lat, lng, submitAction, restaurantId } = req.query;
     console.log(req.query);
 
